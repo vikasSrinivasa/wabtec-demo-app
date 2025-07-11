@@ -1,0 +1,393 @@
+{
+	"info": {
+		"_postman_id": "3a92cacd-7f74-4edb-8955-81b3d81dc718",
+		"name": "Wabtec",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "44925691",
+		"_collection_link": "https://vikassrinivasa.postman.co/workspace/58cefe55-8321-414b-8e6a-6c06e57a113f/collection/44925691-3a92cacd-7f74-4edb-8955-81b3d81dc718?action=share&source=collection_link&creator=44925691"
+	},
+	"item": [
+		{
+			"name": "/upload",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "files",
+							"type": "file",
+							"src": [
+								"/C:/Users/VikasSrinivasa/Desktop/pointnet_embedding_pipeline/glb_files/av-8b_harrier_ii.glb",
+								"/C:/Users/VikasSrinivasa/Desktop/pointnet_embedding_pipeline/glb_files/chevrolet_bench.glb",
+								"/C:/Users/VikasSrinivasa/Desktop/pointnet_embedding_pipeline/glb_files/inline-4_engine.glb",
+								"/C:/Users/VikasSrinivasa/Desktop/pointnet_embedding_pipeline/glb_files/internal_combustion_engine.glb",
+								"/C:/Users/VikasSrinivasa/Desktop/pointnet_embedding_pipeline/glb_files/internal_combustion_engine_moto.glb",
+								"/C:/Users/VikasSrinivasa/Desktop/pointnet_embedding_pipeline/glb_files/mcdonnell_douglas_fa-18c_hornet.glb",
+								"/C:/Users/VikasSrinivasa/Desktop/pointnet_embedding_pipeline/glb_files/mcdonnell_douglas_kc-10_extender.glb",
+								"/C:/Users/VikasSrinivasa/Desktop/pointnet_embedding_pipeline/glb_files/production_line.glb",
+								"/C:/Users/VikasSrinivasa/Desktop/pointnet_embedding_pipeline/glb_files/sukhoi_su-35_fighter_jet.glb",
+								"/C:/Users/VikasSrinivasa/Desktop/pointnet_embedding_pipeline/glb_files/sukhoi_su-37_terminator.glb"
+							]
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/upload",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/pointclouds/process",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/pointclouds/process\n",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"pointclouds",
+						"process\n"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/embed-shape",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/embed-shape",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"embed-shape"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/retrieve-shape",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "query_model",
+							"value": "sukhoi_su-35_fighter_jet_point_cloud",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/retrieve-shape",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"retrieve-shape"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/pointclouds",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/pointclouds",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"pointclouds"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/pointclouds/download/production_line_point_cloud.csv",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/pointclouds/download/production_line_point_cloud.csv",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"pointclouds",
+						"download",
+						"production_line_point_cloud.csv"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/extract-metadata",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/extract-metadata\n",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"extract-metadata\n"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/metadata",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/metadata",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"metadata"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/metadata/download/z28j.json",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/metadata/download/z28j.json",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"metadata",
+						"download",
+						"z28j.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/capture-views",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/capture-views\n",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"capture-views\n"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/label-shape",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/label-shape",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"label-shape"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/labels",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/labels",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"labels"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/labels/download/sukhoi_su-37_terminator_label.json",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/labels/download/sukhoi_su-37_terminator_label.json",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"labels",
+						"download",
+						"sukhoi_su-37_terminator_label.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/fuse-embeddings",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "/fuse-embeddings",
+					"path": [
+						"fuse-embeddings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/final-retrieve?query_model=sukhoi_su-35_fighter_jet",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "query_model",
+							"value": "sukhoi_su-35_fighter_jet",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/final-retrieve?query_model=sukhoi_su-35_fighter_jet",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"final-retrieve"
+					],
+					"query": [
+						{
+							"key": "query_model",
+							"value": "sukhoi_su-35_fighter_jet"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
